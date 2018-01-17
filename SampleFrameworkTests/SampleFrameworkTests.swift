@@ -11,26 +11,23 @@ import XCTest
 
 class SampleFrameworkTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testZero() {
+        XCTAssertEqual(0.isPair, true)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func test1() {
+        XCTAssertEqual(1.isPair, false)
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test2() {
+        XCTAssertEqual(2.isPair, true)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test440() {
+        XCTAssertEqual(440.isPair, true)
     }
-    
+    func testNeg1() {
+        XCTAssertEqual((-1).isPair, false)
+    }
+    func testNeg2() {
+        XCTAssertEqual((-2).isPair, true)
+    }
 }
